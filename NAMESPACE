@@ -2,5 +2,6 @@
 
 export(scale_colour_dfe)
 export(scale_fill_dfe)
+export(theme_nimbus)
 import(cli)
 import(ggplot2)

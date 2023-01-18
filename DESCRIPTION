@@ -1,14 +1,17 @@
 Package: ggdfe
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Title: A Theme for ggplot in Department for Education House Style
+Version: 0.0.1.0
+Authors@R: c(
+    person("Sam", "Cooke", ,"sam.cooke@education.gov.uk", role = c("aut","cre"))
+    )
+Description: A package to apply the house style of the Department
+    for Education to ggplot, including colours and themes, for consistent
+    reproducable charting for R users at DfE.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Imports: 
     cli,
-    ggplot2
+    ggplot2,
+    lifecycle

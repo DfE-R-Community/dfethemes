@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# dfethemes
+# ggDfE
 
 This package seeks to create an easy theme to add to any ggplot to keep
 it in line with DfE brand guidelines.

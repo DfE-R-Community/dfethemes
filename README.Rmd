@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# dfethemes
+# ggDfE
 
 
 ```{r, echo=FALSE, message=FALSE}
@@ -64,7 +64,7 @@ There are also palettes, passed to the 'palettes' argument. These are for select
 - cold2 - white to turqouise (continuous)
 
 ```{r}
-display.dfe.all()
+show_dfe_palettes()
 
 ```
 

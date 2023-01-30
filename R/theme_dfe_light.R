@@ -16,6 +16,7 @@
 #' plot + theme_dfe_light()
 #'
 theme_dfe_light <- function() {
+<<<<<<< HEAD
   theme(
     text = element_text(colour = "#4d4d4d", size = 14),
 
@@ -43,3 +44,19 @@ theme_dfe_light <- function() {
         )
 }
 
+=======
+  theme(axis.title.y = element_text(hjust = 1, angle = 90),
+        axis.title.x = element_text(hjust = 0, angle = 0),
+        axis.text = element_text(colour = "#4d4d4d"),
+        panel.background = element_rect(fill = "#FFFFFF"),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(colour = "#d9d9d9"),
+        panel.grid.minor.y = element_line(colour = "#e6e6e6"),
+        axis.line = element_line(colour = "#b3b3b3"),
+        text = element_text(colour = "#4d4d4d", size = 14),
+        plot.title = element_text(face = "bold", colour = dfe_colours["Blue"]),
+        legend.position = "top",
+        legend.key = element_rect(fill = "#FFFFFF")
+        )
+}
+>>>>>>> 6f6bdc9 (feat - new light theme added)

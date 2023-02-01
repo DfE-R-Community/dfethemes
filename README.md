@@ -23,10 +23,14 @@ ggplot.
 These are the base colours
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="80%" />
 =======
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="80%" />
 >>>>>>> b283726 (Docs - updating the readme with themes and higher dpi)
+=======
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="80%" />
+>>>>>>> 5ba710e (Feat / Docs - altering theme, adding a plot to readme)
 
 There are also palettes, passed to the ‘palettes’ argument. These are
 for selecting a suitable subset of the colours above, depending on if
@@ -45,10 +49,14 @@ you need a discrete, continuous or diverging palette.
 - cold2 - white to turqouise (continuous)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ![](man/figures/README-unnamed-chunk-5-1.png)<!-- -->
 =======
 ![](man/figures/README-unnamed-chunk-4-1.png)<!-- -->
 >>>>>>> b283726 (Docs - updating the readme with themes and higher dpi)
+=======
+![](man/figures/README-unnamed-chunk-5-1.png)<!-- -->
+>>>>>>> 5ba710e (Feat / Docs - altering theme, adding a plot to readme)
 
 Examples of usage would be:
 
@@ -64,10 +72,14 @@ ggplot2::ggplot(data = iris)+
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="90%" />
 =======
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="90%" />
 >>>>>>> b283726 (Docs - updating the readme with themes and higher dpi)
+=======
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="90%" />
+>>>>>>> 5ba710e (Feat / Docs - altering theme, adding a plot to readme)
 
 For clearer plot boundaries, there is also `theme_nimbus()`.
 
@@ -81,7 +93,11 @@ plot + theme_nimbus()
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <img src="man/figures/README-unnamed-chunk-7-1.png" width="90%" />
 =======
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="90%" />
 >>>>>>> b283726 (Docs - updating the readme with themes and higher dpi)
+=======
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="90%" />
+>>>>>>> 5ba710e (Feat / Docs - altering theme, adding a plot to readme)

@@ -4,7 +4,10 @@
 # ggdfe
 
 This package seeks to create an easy theme to add to any ggplot to keep
-it in line with DfE brand guidelines.
+it in line with DfE brand guidelines. Simply transforms existing ggplots
+into the house style of the Department for Education.
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="90%" />
 
 ## Colours
 
@@ -15,7 +18,7 @@ ggplot.
 
 These are the base colours
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="80%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="80%" />
 
 There are also palettes, passed to the ‘palettes’ argument. These are
 for selecting a suitable subset of the colours above, depending on if
@@ -33,7 +36,7 @@ you need a discrete, continuous or diverging palette.
 - cold - white to blue (continuous)
 - cold2 - white to turqouise (continuous)
 
-![](man/figures/README-unnamed-chunk-4-1.png)<!-- -->
+![](man/figures/README-unnamed-chunk-5-1.png)<!-- -->
 
 Examples of usage would be:
 
@@ -48,7 +51,7 @@ ggplot2::ggplot(data = iris)+
   theme_dfe_light()
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="90%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="90%" />
 
 For clearer plot boundaries, there is also `theme_nimbus()`.
 
@@ -61,4 +64,4 @@ plot <- ggplot(ggplot2::diamonds, aes(carat, price)) + geom_point() +
 plot + theme_nimbus()
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="90%" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="90%" />

@@ -17,7 +17,7 @@
 #'
 theme_dfe_light <- function() {
 
-  theme(
+  theme_minimal()  %+replace%  theme(
     text = element_text(colour = "#4d4d4d", size = 14),
 
 
@@ -37,9 +37,9 @@ theme_dfe_light <- function() {
     strip.background = element_rect(fill = "#FFFFFF",
                                     colour = "#b3b3b3", linewidth = 1),
 
-    plot.title = element_text(face = "bold", colour = dfe_colours["Blue"], hjust = 0),
+    plot.title = element_text(face = "bold", colour = dfe_colours["Blue"], hjust = 0, size = 21, margin = margin(7,7,7,7)),
     legend.position = "top",
-    legend.key = element_rect(fill = "#FFFFFF"),
+    legend.key = element_rect(fill = "#FFFFFF", colour = "#FFFFFF"),
     plot.margin = margin(5,4,4,3)
         )
 }

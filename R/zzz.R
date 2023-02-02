@@ -1,5 +1,9 @@
 .onLoad <- function(libname, pkgname) {
 
+  cli_alert_info("Setting default ggplot2 theme to {.val theme_dfe_light()}")
+
+  theme_set(theme_dfe_light())
+
 
   cli_alert_info("Setting default ggplot2 colour scales to {.val scale_colour_dfe()}")
 

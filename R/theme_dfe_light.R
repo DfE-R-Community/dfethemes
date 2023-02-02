@@ -20,10 +20,7 @@ theme_dfe_light <- function() {
   theme(
     text = element_text(colour = "#4d4d4d", size = 14),
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 5ba710e (Feat / Docs - altering theme, adding a plot to readme)
     axis.title.y = element_text(hjust = 0, angle = 90),
     axis.title.x = element_text(hjust = 0, angle = 0),
     axis.text = element_text(colour = "#4d4d4d"),
@@ -32,21 +29,15 @@ theme_dfe_light <- function() {
     axis.line.y = element_blank(),
     axis.line.x = element_line(lineend = "square", linewidth = 1),
 
-    axis.line.y = element_blank(),
-    axis.line.x = element_line(lineend = "square", linewidth = 1),
-    panel.background = element_rect(fill = "#FFFFFF"),
+    panel.background = element_rect(fill = "#FFFFFF", colour = "#FFFFFF"),
     panel.grid = element_blank(),
     panel.grid.major.y = element_line(colour = "#d9d9d9"),
     panel.grid.minor.y = element_line(colour = "#e6e6e6"),
 
     strip.background = element_rect(fill = "#FFFFFF",
                                     colour = "#b3b3b3", linewidth = 1),
-<<<<<<< HEAD
-=======
 
->>>>>>> 5ba710e (Feat / Docs - altering theme, adding a plot to readme)
-
-    plot.title = element_text(face = "bold", colour = dfe_colours["Blue"]),
+    plot.title = element_text(face = "bold", colour = dfe_colours["Blue"], hjust = 0),
     legend.position = "top",
     legend.key = element_rect(fill = "#FFFFFF"),
     plot.margin = margin(5,4,4,3)

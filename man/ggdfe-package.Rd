@@ -6,9 +6,9 @@
 \alias{ggdfe-package}
 \title{ggdfe: A Theme for ggplot in Department for Education House Style}
 \description{
-A package to apply the house style of the Department for Education to ggplot, including colours and themes, for consistent reproducable charting for R users at DfE.
+Apply the house style of the Department for Education to ggplot, including colours and themes, for consistent reproducable charting for R users at DfE.
 
-A package to apply the house style of the Department for Education to ggplot, including colours and themes, for consistent reproducable charting for R users at DfE.
+Apply the house style of the Department for Education to ggplot, including colours and themes, for consistent reproducable charting for R users at DfE.
 }
 \seealso{
 Useful links:

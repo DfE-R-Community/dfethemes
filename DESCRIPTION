@@ -4,9 +4,9 @@ Version: 0.0.1.0
 Authors@R: c(
     person("Sam", "Cooke", ,"sam.cooke@education.gov.uk", role = c("aut","cre"))
     )
-Description: A package to apply the house style of the Department
-    for Education to ggplot, including colours and themes, for consistent
-    reproducable charting for R users at DfE.
+Description: Apply the house style of the Department for Education to ggplot, 
+    including colours and themes, for consistent
+    reproducable charting for R users at DfE
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

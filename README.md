@@ -1,7 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
 
-# dfethemes
+[![R-CMD-check](https://github.com/DfE-R-Community/ggdfe/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DfE-R-Community/ggdfe/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
+# ggdfe
 
 This package seeks to create an easy theme to add to any ggplot to keep
 it in line with DfE brand guidelines.

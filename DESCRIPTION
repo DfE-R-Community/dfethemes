@@ -7,7 +7,6 @@ Authors@R: c(
 Description: Apply the house style of the Department for Education to ggplot, 
     including colours and themes, for consistent
     reproducable charting for R users at DfE.
-
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

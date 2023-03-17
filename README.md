@@ -68,9 +68,9 @@ ggplot2::ggplot(data = iris)+
   ggplot2::aes(x=Sepal.Length, colour = Species)+
   ggplot2::geom_density(linewidth = 1.5)+
   scale_colour_dfe(palette = "likert")+
-  labs(title = "Default title is in dark blue",
-       subtitle = "Default subtitle and copy text are dark grey",
-       caption = "Using theme_dfe_light()")+
+  labs(title = "Dark title is pale blue",
+       subtitle = "Dark subtitle and copy text are pale grey",
+       caption = "Using theme_dfe_dark()")+
   theme_dfe_dark()
 ```
 

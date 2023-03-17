@@ -8,7 +8,13 @@ dfe_colours <- c(
   "Purple" = "#774B99",
   "Yellow" = "#f6da40",
   "White" = "#ffffff",
-  "Grey" = "#e5e5e5"
+  "Grey" = "#e5e5e5",
+  "blue_l" = "#7488A0",
+  "red_l" = "#F39D9E",
+  "turq_l" = "#80D6E8",
+  "lime_l" = "#C8E69F",
+  "pink_l" = "#ECB0D0",
+  "purp_l" = "#AD93C2"
   )
 
 
@@ -36,7 +42,8 @@ dfe_palettes <- list(
   "heat" = dfe_cols("White", "Red"),
   "heat2" = dfe_cols("White", "Pink"),
   "cold" = dfe_cols("White", "Blue"),
-  "cold2" = dfe_cols("White", "Turquoise")
+  "cold2" = dfe_cols("White", "Turquoise"),
+  "pale" = dfe_cols("blue_l", "red_l", "turq_l", "lime_l", "pink_l", "purp_l")
 )
 
 # Function to create the palette

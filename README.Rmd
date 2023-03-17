@@ -57,7 +57,7 @@ These are the base colours
 
 ```{r, fig.asp= .2, out.width="80%"}
 
-tibble::tibble(y=max(length(dfe_colours)),x=dfe_colours) -> data
+tibble::tibble(y=max(length(dfe_colours)),x=dfe_colours[!grepl("_l", names(dfe_colours))]) -> data
 
 ggplot2::ggplot(data=data, ggplot2::aes(x=names(x),y=y, fill = x))+
   ggplot2::geom_tile(width=.9,height=.9, colour = '#e5e5e5', linewidth = .5)+
@@ -84,6 +84,7 @@ There are also palettes, passed to the 'palettes' argument. These are for select
 - heat2 - white to pink (continuous)
 - cold - white to blue (continuous)
 - cold2 - white to turqouise (continuous)
+- pale - paler palettes for big blocks of colour (bar charts or treemaps)
 
 ```{r}
 show_dfe_palettes()
@@ -91,6 +92,8 @@ show_dfe_palettes()
 ```
 
 Examples of usage would be:
+
+Light theme
 
 ```{r, echo = TRUE, fig.asp= .6, out.width="90%"}
 ggplot2::ggplot(data = iris)+
@@ -102,6 +105,20 @@ ggplot2::ggplot(data = iris)+
        caption = "Using theme_dfe_light()")+
   theme_dfe_light()
 
+
+```
+
+Dark theme
+
+```{r, echo = TRUE, fig.asp=.6, out.width = "90%"}
+ggplot2::ggplot(data = iris)+
+  ggplot2::aes(x=Sepal.Length, colour = Species)+
+  ggplot2::geom_density(linewidth = 1.5)+
+  scale_colour_dfe(palette = "likert")+
+  labs(title = "Default title is in dark blue",
+       subtitle = "Default subtitle and copy text are dark grey",
+       caption = "Using theme_dfe_light()")+
+  theme_dfe_dark()
 
 ```
 

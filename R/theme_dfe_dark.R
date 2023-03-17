@@ -21,7 +21,7 @@ theme_dfe_dark <- function() {
     text = element_text(colour = "#b3b3b3", size = 14, face = "bold"),
 
 
-    axis.title.y = element_text(hjust = 0, angle = 90, vjust = 1.5),
+    axis.title.y = element_text(hjust = 0, angle = 90, margin = margin(0, 12, 0, 0)),
     axis.title.x = element_text(hjust = 0, angle = 0),
     axis.text = element_text(colour = dfe_colours["blue_l"]),
     axis.ticks = element_line(colour = dfe_colours["blue_l"]),

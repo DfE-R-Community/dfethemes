@@ -21,7 +21,7 @@ theme_dfe_light <- function() {
     text = element_text(colour = "#4d4d4d", size = 14),
 
 
-    axis.title.y = element_text(hjust = 0, angle = 90),
+    axis.title.y = element_text(hjust = 0, angle = 90, margin = margin(0, 12, 0, 0)),
     axis.title.x = element_text(hjust = 0, angle = 0),
     axis.text = element_text(colour = "#4d4d4d"),
     axis.ticks = element_line(colour = "#b3b3b3"),

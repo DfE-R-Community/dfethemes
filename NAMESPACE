@@ -2,6 +2,7 @@
 
 export(scale_colour_dfe)
 export(scale_fill_dfe)
+export(theme_dfe_dark)
 export(theme_dfe_light)
 export(theme_nimbus)
 import(cli)

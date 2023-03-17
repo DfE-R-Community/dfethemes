@@ -18,7 +18,7 @@
 theme_dfe_dark <- function() {
 
   theme_minimal()  %+replace%  theme(
-    text = element_text(colour = "#b3b3b3", size = 14, face = 'bold'),
+    text = element_text(colour = "#b3b3b3", size = 14, face = "bold"),
 
 
     axis.title.y = element_text(hjust = 0, angle = 90, vjust = 1.5),
@@ -37,11 +37,10 @@ theme_dfe_dark <- function() {
     strip.background = element_rect(fill = "#183860",
                                     colour = "#b3b3b3", linewidth = 1),
 
-    plot.title = element_text(face = "bold", colour = "#A3AFBF", hjust = 0, size = 21, margin = margin(7,7,7,7)),
+    plot.title = element_text(face = "bold", colour = "#A3AFBF", hjust = 0, size = 21, margin = margin(7, 7, 7, 7)),
     legend.position = "top",
     legend.key = element_rect(fill = "#183860", colour = "#183860"),
-    plot.margin = margin(5,4,4,3),
+    plot.margin = margin(5, 4, 4, 3),
     plot.background = element_rect(fill = dfe_colours["Blue"], colour = dfe_colours["Blue"])
   )
 }
-

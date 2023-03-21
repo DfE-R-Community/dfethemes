@@ -77,7 +77,8 @@ dfe_pal <- function(palette = "main", reverse = FALSE, ...) {
 #'  - `heat` - white to red (continuous)
 #'  - `heat2` - white to pink (continuous)
 #'  - `cold` - white to blue (continuous)
-#'  - `cold2` - white to turqouise (continuous)
+#'  - `cold2` - white to turquoise (continuous)
+#'  - `pale` - pale colours for barcharts or choropleth maps
 #'
 #' @export
 #'
@@ -134,7 +135,7 @@ scale_fill_dfe <- function(palette = "main", discrete = TRUE, reverse = FALSE, .
 
 
 
-# This should be an enxported function at the moment, but it could be developed
+# This should be an unxported function at the moment, but it could be developed
 # in the future Plays the same role as `Rcolorbrewer::display.brewer.all()` but
 # in ggplot You can also pass individual palettes such as `dfe_palettes["full"]`
 show_dfe_palettes <- function(palette = dfe_palettes) {

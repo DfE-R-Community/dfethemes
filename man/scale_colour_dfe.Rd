@@ -31,7 +31,8 @@ These are the palettes in their current form
 \item \code{heat} - white to red (continuous)
 \item \code{heat2} - white to pink (continuous)
 \item \code{cold} - white to blue (continuous)
-\item \code{cold2} - white to turqouise (continuous)
+\item \code{cold2} - white to turquoise (continuous)
+\item \code{pale} - pale colours for barcharts or choropleth maps
 }
 }
 \description{

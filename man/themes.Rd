@@ -10,7 +10,7 @@
 \usage{
 theme_dfe_dark()
 
-theme_dfe_light()
+theme_dfe_light(base_axis = "x")
 
 theme_nimbus(
   base_size = 11,
@@ -21,6 +21,8 @@ theme_nimbus(
 )
 }
 \arguments{
+\item{base_axis}{sets the orientation of the base and grid lines (defaults \code{x})}
+
 \item{base_size, base_family, base_line_size, base_rect_size}{See
 \code{ggplot2::theme_grey()} for details}
 
@@ -31,6 +33,9 @@ the vertical gridlines will not be shown.}
 A dark ggplot2 DfE theme
 
 A light ggplot2 DfE theme
+
+Use \code{base_axis} to switch between horizontal and vertical gridlines.
+Use \code{y} for horizontal bar charts or \code{both} for all gridlines
 
 A ggplot2 plot theme
 }
@@ -60,7 +65,9 @@ scale_colour_dfe()+
   labs(title = "This is the title",
          subtitle = "This is a subtitle",
                 caption = "This is a caption | Source: Iris dataset")
+
 plot + theme_dfe_light()
+plot + theme_dfe_light(base_axis = "both")
 
 library(ggplot2)
 

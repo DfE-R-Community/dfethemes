@@ -19,7 +19,13 @@
 #'                 caption = "This is a caption | Source: Iris dataset")
 #'
 #' plot + theme_dfe_light()
-#' plot + theme_dfe_light(base_axis = "both")
+#'
+#' plot <- ggplot(data = mtcars, aes(x=cyl, y=hp, fill = cyl))+
+#'   geom_col()+
+#'   coord_flip()+
+#'   theme_dfe_light(base_axis = "y")
+#'
+#'plot
 #'
 theme_dfe_light <- function(base_axis = "x") {
 

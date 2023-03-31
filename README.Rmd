@@ -13,7 +13,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  dpi = 300
+  
 )
 ```
 
@@ -29,7 +30,24 @@ knitr::opts_chunk$set(echo = FALSE) # if you want code chunks to be displayed, b
 
 
 
-This package seeks to create an easy theme to add to any ggplot to keep it in line with DfE brand guidelines.
+This package seeks to create an easy theme to add to any ggplot to keep it in line with DfE brand guidelines. Simply transforms existing ggplots into the house style of the Department for Education.
+
+
+
+```{r, echo=FALSE, message=FALSE, fig.asp= .6, out.width="90%"}
+ggplot(data = iris, aes(x=Petal.Length, y=Sepal.Length, colour = Species))+
+  geom_jitter(size = 2, alpha = .7)+
+  scale_colour_dfe()+
+  geom_smooth(method = "lm", se = FALSE)+
+  theme_dfe_light()+
+  labs(title = "ggdfe",
+       subtitle = "Turn ggplots into DfE house style and colours")
+
+
+
+```
+
+
 
 ## Colours
 
@@ -37,9 +55,9 @@ There are two functions that work to add in colour scales: `scale_fill_dfe()` an
 
 These are the base colours
 
-```{r, fig.height = 1.5}
+```{r, fig.asp= .2, out.width="80%"}
 
-tibble::tibble(y=max(length(dfe_colours)),x=dfe_colours) -> data
+tibble::tibble(y=max(length(dfe_colours)),x=dfe_colours[!grepl("_l", names(dfe_colours))]) -> data
 
 ggplot2::ggplot(data=data, ggplot2::aes(x=names(x),y=y, fill = x))+
   ggplot2::geom_tile(width=.9,height=.9, colour = '#e5e5e5', linewidth = .5)+
@@ -66,24 +84,53 @@ There are also palettes, passed to the 'palettes' argument. These are for select
 - heat2 - white to pink (continuous)
 - cold - white to blue (continuous)
 - cold2 - white to turqouise (continuous)
+- pale - paler palettes for big blocks of colour (bar charts or treemaps)
 
 ```{r}
 show_dfe_palettes()
 
 ```
 
-Exaples of usage would be:
+Examples of usage would be:
 
-```{r, echo = TRUE}
+Light theme
+
+```{r, echo = TRUE, fig.asp= .6, out.width="90%"}
 ggplot2::ggplot(data = iris)+
   ggplot2::aes(x=Sepal.Length, colour = Species)+
   ggplot2::geom_density(linewidth = 1.5)+
   scale_colour_dfe(palette = "main")+
-  ggplot2::theme_minimal()
+  labs(title = "Default title is in dark blue",
+       subtitle = "Default subtitle and copy text are dark grey",
+       caption = "Using theme_dfe_light()")+
+  theme_dfe_light()
 
 
 ```
 
+Dark theme
 
+```{r, echo = TRUE, fig.asp=.6, out.width = "90%"}
+ggplot2::ggplot(data = iris)+
+  ggplot2::aes(x=Sepal.Length, colour = Species)+
+  ggplot2::geom_density(linewidth = 1.5)+
+  scale_colour_dfe(palette = "likert")+
+  labs(title = "Dark title is pale blue",
+       subtitle = "Dark subtitle and copy text are pale grey",
+       caption = "Using theme_dfe_dark()")+
+  theme_dfe_dark()
 
+```
+
+For clearer plot boundaries, there is also `theme_nimbus()`.
+
+```{r, echo = TRUE, fig.asp= .6, out.width="90%"}
+plot <- ggplot(ggplot2::diamonds, aes(carat, price)) + geom_point() +
+  labs(title = "Theme_nimbus",
+       subtitle = "",
+       caption = "theme_nimbus()")
+
+plot + theme_nimbus()
+
+```
 

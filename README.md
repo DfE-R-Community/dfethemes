@@ -8,7 +8,10 @@
 # ggdfe
 
 This package seeks to create an easy theme to add to any ggplot to keep
-it in line with DfE brand guidelines.
+it in line with DfE brand guidelines. Simply transforms existing ggplots
+into the house style of the Department for Education.
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="90%" />
 
 ## Colours
 
@@ -19,7 +22,7 @@ ggplot.
 
 These are the base colours
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="80%" />
 
 There are also palettes, passed to the ‘palettes’ argument. These are
 for selecting a suitable subset of the colours above, depending on if
@@ -36,17 +39,52 @@ you need a discrete, continuous or diverging palette.
 - heat2 - white to pink (continuous)
 - cold - white to blue (continuous)
 - cold2 - white to turqouise (continuous)
+- pale - paler palettes for big blocks of colour (bar charts or
+  treemaps)
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+![](man/figures/README-unnamed-chunk-5-1.png)<!-- -->
 
-Exaples of usage would be:
+Examples of usage would be:
+
+Light theme
 
 ``` r
 ggplot2::ggplot(data = iris)+
   ggplot2::aes(x=Sepal.Length, colour = Species)+
   ggplot2::geom_density(linewidth = 1.5)+
   scale_colour_dfe(palette = "main")+
-  ggplot2::theme_minimal()
+  labs(title = "Default title is in dark blue",
+       subtitle = "Default subtitle and copy text are dark grey",
+       caption = "Using theme_dfe_light()")+
+  theme_dfe_light()
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="90%" />
+
+Dark theme
+
+``` r
+ggplot2::ggplot(data = iris)+
+  ggplot2::aes(x=Sepal.Length, colour = Species)+
+  ggplot2::geom_density(linewidth = 1.5)+
+  scale_colour_dfe(palette = "likert")+
+  labs(title = "Dark title is pale blue",
+       subtitle = "Dark subtitle and copy text are pale grey",
+       caption = "Using theme_dfe_dark()")+
+  theme_dfe_dark()
+```
+
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="90%" />
+
+For clearer plot boundaries, there is also `theme_nimbus()`.
+
+``` r
+plot <- ggplot(ggplot2::diamonds, aes(carat, price)) + geom_point() +
+  labs(title = "Theme_nimbus",
+       subtitle = "",
+       caption = "theme_nimbus()")
+
+plot + theme_nimbus()
+```
+
+<img src="man/figures/README-unnamed-chunk-8-1.png" width="90%" />

@@ -1,0 +1,112 @@
+---
+title: "Usage"
+author: "Sam Cooke, DfE"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+devtools::load_all(".")
+```
+
+## ggDfE
+
+`ggdfe` is a package designed to make it easy to convert any ggplot into the in-house brand guidelines of the Department for Education. If you're unsure of what these are, they can be viewed on DfE's intranet.
+
+Fundamentally the package is a cosmetic change to ggplot2. By loading the package, the default theme will change to the light dfe theme (see `theme_dfe_light`) and the default colour palettes for fill and colour aesthetics will change to the `main` colour palette.
+
+For most purposes, you shouldn't have to make more changes than this. However, there are options available to easily change charts and plots to suit the many needs.
+
+# Default settings
+
+`ggdge` defaults to a clean panel with horizontal gridlines, with subtle emphasis on the major lines. There are no horizontal lines. For most purposes - distributions, time series and bar charts, this provides enough of a reference to the reader to be useful.
+
+```{R}
+
+labs_ex <- labs(title = "Title", subtitle = "Subtitle", caption = "Caption")
+
+ggplot(data = iris, aes(x=Sepal.Length, colour = Species))+
+  geom_density(linewidth = 2)+
+  labs_ex
+
+```
+
+The default discrete colour palette uses three main brand colours for DfE. The default continuous palette uses an interpolation of the `cool` palette. If you have more than three categorical variables, consider using a palete better suited to this purpose - `full` uses all the colours, and will interpolate additional colours if you have a greater number of categories than colours. However, good chart design empahasises restraint in too many categories - if you find there are too few colours in the `full` palette, we would suggest revisiting the purpose of the chart to simplify and remove or group categories together.
+
+# Axis orientation
+
+For horizontal bar charts, horizontal axis lines are not conducive to an easy-to-read chart. In these situations, you can switch the direction of the axis lines using the `base_axis` argument of `theme_dfe_*`.
+
+```{r}
+
+bar <- ggplot(data = diamonds, aes(x=cut))+
+  geom_bar()+
+  coord_flip()+
+  theme_dfe_light(base_axis = "y")+
+  labs_ex
+
+bar
+  
+```
+
+You can also use gridlines in the traditional manner with `base_axis = "both"`
+
+```{r}
+ggplot(data = iris, aes(x = Sepal.Length, y= Sepal.Width, colour = Species))+
+  geom_jitter(size = 2)+
+  theme_dfe_light(base_axis = "both")+
+  labs_ex
+
+```
+
+# Colour Palettes
+
+Palettes available fall into the traditional three categories:
+- Continuous 
+- Discrete
+- Diverging
+
+```{r, echo = FALSE}
+
+show_dfe_palettes()
+
+```
+
+As a rule, all these colours should be colourblind friendly. However, the right choice of colour for the right chart is harder to express as a rule.
+
+#Diverging Scales
+
+Usually, red should be bad and blue should be good. The default is that more is better and less is worse, so higher numbers will sit at the blue end of diverging scales.
+
+```{R}
+ggplot(data = ChickWeight, aes(x = Time, y= weight, group = Chick, colour = Diet))+
+  geom_line(linewidth = 1, alpha = .3)+
+  scale_colour_dfe(palette = "likert")+
+  geom_jitter(data = ChickWeight %>% dplyr::group_by(Chick) %>% dplyr::filter(Time == max(Time)),
+              height = .1, width = .1, size = 2, alpha = .5)+
+  labs(title = "Chick weight over time, by diet type",
+       caption = "ChickWeight Dataset")
+
+```
+
+However, *more* isn't necessarily *better* and if you need to swap the direction of the scale, the `reverse` argument will let you do this. In the example below, engine displacement is bad if you want to have better mileage from your vehicle - good chart design should use colour to emphasise this relationship.
+
+```{r}
+ggplot(mtcars, aes(x=wt, y = mpg, colour = disp))+
+  geom_point(size = 2)+
+  scale_colour_dfe(palette = "likert", discrete = FALSE, reverse = TRUE)+
+  labs(title = "Heavier cars with greater engine displacement \nhave lower MPG",
+       caption = "mtcars dataset")
+
+
+```
+
+
+
+
+
+
+
+
+
